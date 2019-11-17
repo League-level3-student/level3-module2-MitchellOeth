@@ -46,12 +46,11 @@ public class _00_SortedArrayChecker {
 	//   array is in alphabetical order and false otherwise
 	//   (You can compare characters just like integers)
 	public static boolean charArraySorted(char[] unsorted) {	
-		for (char i = unsorted[0]; i < unsorted.length - 1; i++) {
-			if (unsorted[i] <= unsorted[i + 1]) {
-				
-			}
-			else {
-				return false;
+		for (char i = unsorted[0]; i < unsorted.length - 1;) {
+			if (unsorted[i] > unsorted[i + 1]) {
+								return false;
+			} else {
+				i++;
 			}
 		}
 		return true;
@@ -63,10 +62,12 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
-	//   (Use the compareTo(String) method)
+	//   (Use the  method)
 	public static boolean stringArraySorted(String[] sorted) {
 		for (int i = 0; i < sorted.length; i++) {
-			
+			if(sorted[i].compareTo(sorted[i+1])>0) {
+				return false;
+			}
 		}
 		return true;
 	}

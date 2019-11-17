@@ -33,7 +33,7 @@ public class _01_BinarySearch {
             //   binarySearch method. Pass in start and mid - 1
             //   for the end variable.
             if (array[mid] > value) {
-            	binarySearch(array, start, (mid-1) + start, value);
+            	binarySearch(array, start, mid-1, value);
 				
 				return value;
 			}
